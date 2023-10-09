@@ -44,8 +44,20 @@ npm install cors -i
 npx sequelize db:create
 npx sequelize db:migrate
 ```
+### 2.2 VIEWS
 
-### 2.2 Configure o Backend NODE + EXPRESS: ESLINT
+O sistema exige que algumas views sejam criadas no banco de dados, são elas:
+
+- USER EXPENSE
+```sql
+
+CREATE VIEW user_expense AS
+select eu.id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense from expenseusers as eu
+inner join userlogins as ul on ul.id = eu.fk_UserLogin_id
+inner join expenses as e on e.id = eu.fk_Expense_id;
+
+```
+### 2.3 Configure o Backend NODE + EXPRESS: ESLINT
 
 ```powershell
 
