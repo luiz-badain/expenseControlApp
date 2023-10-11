@@ -57,6 +57,37 @@ inner join userlogins as ul on ul.id = eu.fk_UserLogin_id
 inner join expenses as e on e.id = eu.fk_Expense_id;
 
 ```
+- Triggers USER EXPENSE
+```sql
+
+DELIMITER $
+
+CREATE TRIGGER Tgr_costOfLiving_Insert AFTER INSERT
+ON ExpenseUsers
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, Expenses as es SET ul.costOfLiving = ul.costOfLiving + es.valueExpense
+WHERE ul.id = NEW.fk_UserLogin_id and es.id = NEW.fk_Expense_id;
+END$
+
+CREATE TRIGGER Tgr_costOfLiving_Update AFTER UPDATE
+ON Expenses
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, ExpenseUsers as eu SET ul.costOfLiving = ul.costOfLiving + NEW.valueExpense - OLD.valueExpense
+WHERE ul.id = eu.fk_UserLogin_id and new.id = eu.fk_Expense_id;
+END$
+
+CREATE TRIGGER Tgr_costOfLiving_Delete AFTER DELETE
+ON ExpenseUsers
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, Expenses as es SET ul.costOfLiving = ul.costOfLiving - es.valueExpense
+WHERE ul.id = OLD.fk_UserLogin_id and es.id = OLD.fk_Expense_id;
+END$
+
+DELIMITER ;
+```
 ### 2.3 Configure o Backend NODE + EXPRESS: ESLINT
 
 ```powershell
