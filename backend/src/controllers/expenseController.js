@@ -54,22 +54,6 @@ const update = async (req, res) => {
             return res.status(404).json({ message: 'Despesa de usuário não encontrada' });
         }
 
-        // Pegando o valor da despeza a partir do objeto
-        const oldValueExpense = parseFloat((await Expense.findByPk(expenseUser.fk_Expense_id)).valueExpense);
-
-        // Consulte o usuário para obter o valor atual de 'costOfLiving'
-        const user = await UserLogin.findByPk(expenseUser.fk_UserLogin_id);
-        if (!user) {
-            return res.status(404).json({ message: 'Usuário não encontrado' });
-        }
-        const currentCostOfLiving = user.costOfLiving;
-
-        // Calcule a nova somatória
-        const newCostOfLiving = parseFloat(currentCostOfLiving) + parseFloat(valueExpense) - parseFloat(oldValueExpense);
-
-        // Atualize 'costOfLiving' na tabela de usuários
-        await UserLogin.update({ costOfLiving: newCostOfLiving }, { where: { id: user.id } });
-
         // Atualizar Despeza do Usuário
         await Expense.update(
             { expenseName, isFixedExpense, isVariableExpense, valueExpense },
@@ -79,7 +63,6 @@ const update = async (req, res) => {
         );
 
         res.status(200).json({ message: 'Despeza Atualizada com sucesso' });
-
 
     } catch (error) {
         console.error('Erro ao atualizar despesa:', error);
