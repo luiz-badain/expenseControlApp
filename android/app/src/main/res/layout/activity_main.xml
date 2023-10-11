@@ -7,21 +7,48 @@
     tools:context=".MainActivity">
 
     <View
+        android:id="@+id/topcolor4"
+        android:layout_width="413dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top4"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="-26dp"
+
+        />
+
+    <View
+        android:id="@+id/topcolor3"
+        android:layout_width="406dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top3"
+        tools:layout_editor_absoluteX="-64dp"
+        tools:layout_editor_absoluteY="-5dp" />
+
+    <View
         android:id="@+id/topcolor2"
-        android:layout_width="524dp"
+        android:layout_width="409dp"
         android:layout_height="368dp"
         android:background="@drawable/background_top2"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="2dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp" />
 
+    <View
+        android:id="@+id/topcolor4"
+        android:layout_width="413dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top4"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="-26dp"
+
+        />
 
     <View
         android:id="@+id/topcolor"
-        android:layout_width="523dp"
-        android:layout_height="402dp"
+        android:layout_width="416dp"
+        android:layout_height="367dp"
         android:background="@drawable/background_top"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-32dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-77dp"
 
         />
 
@@ -29,12 +56,46 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEJA BEM VINDO! "
+        android:text="@string/welcome"
+        android:textColor="@color/white"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="169dp" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="85dp"
+        app:srcCompat="@drawable/iconedin2"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="47dp" />
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Blogin"
+        style="@style/gradiantBotton"
+        android:layout_width="324dp"
+        android:layout_height="61dp"
+        android:drawableEnd="@drawable/arrow3"
+        android:paddingStart="20dp"
+        android:text="Login"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="412dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Bregister"
+        style="@style/gradiantBotton"
+        android:layout_width="327dp"
+        android:layout_height="59dp"
+        android:drawableEnd="@drawable/arrow3"
+        android:paddingStart="20dp"
+        android:text="Register"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="507dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
