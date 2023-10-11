@@ -1,6 +1,5 @@
 const Expense = require('../models').Expense;
 const ExpenseUser = require('../models').ExpenseUser;
-const UserLogin = require('../models').UserLogin;
 
 //Cadastrar Despeza do usuário (POST)
 const add = async (req, res) => {
@@ -27,30 +26,33 @@ const expenseByUser = async (req, res) => {
 
     try {
         // Execute uma consulta SQL para selecionar todas as despesas do usuário com base no ID do usuário
-        const userExpenses = await sequelize.query(
-            `SELECT *
-         FROM user_expense
-         WHERE fk_UserLogin_id = :id`,
+        const userExpenses = await ExpenseUser.sequelize.query(
+            `SELECT * FROM user_expense WHERE fk_UserLogin_id = :id`,
             {
-                type: sequelize.QueryTypes.SELECT,
+                type: ExpenseUser.sequelize.QueryTypes.SELECT,
+                replacements: { id },
             }
         );
 
-        res.status(200).json({ userExpenses });
+        res.status(200).json(userExpenses);
     } catch (error) {
         console.error('Erro ao buscar despesas do usuário:', error);
         res.status(500).json({ message: 'Erro ao buscar despesas do usuário' });
     }
 };
 
+
 // const allByUser = async (req, res) => {
 //     try {
         
-//         await ExpenseUser.sequelize.query("select * from user_expense",
-//         { model: ExpenseUser }).then(function (expenses) {
-//             var nExpenses = JSON.parse(JSON.stringify(expenses));
-//             res.status(200).json(nExpenses);
-//         });
+//         const userExpenses = await ExpenseUser.sequelize.query(
+//             `SELECT * FROM user_expense`,
+//             {
+//                 type: ExpenseUser.sequelize.QueryTypes.SELECT
+//             }
+//         );
+
+//         res.status(200).json(userExpenses);
 
 //     } catch (error) {
 //         console.error('Erro ao buscar despesas:', error);
