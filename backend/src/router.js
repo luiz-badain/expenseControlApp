@@ -16,11 +16,9 @@ router.delete('/user/:id', userLogin.del); // delete um usuário
 
 // Rotas do CRUD de Despezas
 router.post('/user-expense/add/:id', expense.add); // adiciona Despeza e despeza do Usuário
-router.get('/user-expense/all/:id', expense.allByUser); // Retorna todas as despezas do usuário
-// router.get('/expense/:id', expense.specific); // retorna um usuário baseado em seu id
-router.put('/expense/:id', expense.update); // atualiza os dados do usuário
-router.delete('/expense/:id', expense.del); // delete um usuário
-
-
+router.get('/user-expense/:id', expense.expenseByUser); // Retorna todas as despezas por usuário
+// router.get('/user-expense/all', expense.allByUser); // retorna todas as despezas dos usuários
+router.put('/expense/:id', expense.update); // atualiza os dados da despeza do usuário
+router.delete('/expense/:id', expense.del); // delete uma despeza e a despeza do usuário
 
 module.exports = router;

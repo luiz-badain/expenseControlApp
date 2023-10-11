@@ -33,18 +33,17 @@ const add = async (req, res) => {
     }
 };
 
-const allByUser = async (req, res) => {
+const expenseByUser = async (req, res) => {
     const { id } = req.params; // Este é o ID do usuário
 
     try {
         // Execute uma consulta SQL para selecionar todas as despesas do usuário com base no ID do usuário
-        const userExpenses = await ExpenseUser.sequelize.query(
+        const userExpenses = await sequelize.query(
             `SELECT *
          FROM user_expense
          WHERE fk_UserLogin_id = :id`,
             {
-                replacements: { id },
-                type: ExpenseUser.sequelize.QueryTypes.SELECT,
+                type: sequelize.QueryTypes.SELECT,
             }
         );
 
@@ -54,6 +53,23 @@ const allByUser = async (req, res) => {
         res.status(500).json({ message: 'Erro ao buscar despesas do usuário' });
     }
 };
+
+// const allByUser = async (req, res) => {
+//     try {
+        
+//         await ExpenseUser.sequelize.query("select * from user_expense",
+//         { model: ExpenseUser }).then(function (expenses) {
+//             var nExpenses = JSON.parse(JSON.stringify(expenses));
+//             res.status(200).json(nExpenses);
+//         });
+
+//     } catch (error) {
+//         console.error('Erro ao buscar despesas:', error);
+//         res.status(500).json({ message: 'Erro ao buscar despesas' });
+//     }
+// };
+
+
 
 const update = async (req, res) => {
     const { id } = req.params; // Este é o ID da despesa do usuário que está sendo alterada
@@ -139,8 +155,8 @@ const del = async (req, res) => {
 
 module.exports = {
     add,
-    allByUser,
-    // specific,
+    expenseByUser,
+    // allByUser,
     update,
     del
 };
