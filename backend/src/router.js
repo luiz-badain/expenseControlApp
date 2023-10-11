@@ -4,6 +4,7 @@ const router = express.Router();
 //importações
 const userLogin = require('./controllers/userLoginController.js');
 const expense = require('./controllers/expenseController.js');
+const category = require('./controllers/categoryController.js');
 
 router.get('/', (req, res) => res.send('Hello world'));
 
@@ -20,5 +21,15 @@ router.get('/user-expense/:id', expense.expenseByUser); // Retorna todas as desp
 // router.get('/user-expense/all', expense.allByUser); // retorna todas as despezas dos usuários
 router.put('/expense/:id', expense.update); // atualiza os dados da despeza do usuário
 router.delete('/expense/:id', expense.del); // delete uma despeza e a despeza do usuário
+
+// Rotas do CRUD de Categoria
+router.post('/category/add', category.add); // adiciona Categoria
+router.post('/category-expense/:id', category.addCategoryExpense); // Cadastrar categoria de despeza
+
+router.get('/category/all', category.all); // Retorna todos as Categorias
+router.get('/category-expense/:id', category.allExpenseCategories); // Retorna todos as Categorias de uma despeza
+// router.get('/category/:id', category.specific); // retorna uma Categoria baseado em seu id
+// router.put('/category/:id', category.update); // atualiza os dados da Categoria
+// router.delete('/category/:id', category.del); // delete uma Categoria
 
 module.exports = router;
