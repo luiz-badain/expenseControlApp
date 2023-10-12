@@ -6,22 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bregister2"
-        android:layout_width="302dp"
-        android:layout_height="57dp"
-        android:background="@drawable/background_buttonR"
-        android:drawableEnd="@drawable/arrow3"
-        android:paddingStart="20dp"
-        android:text="Atualizar"
-        android:textAlignment="textStart"
-        android:textColor="@color/blue"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="659dp" />
-
     <View
         android:id="@+id/topcolor3"
         android:layout_width="406dp"
+
         android:layout_height="368dp"
         android:background="@drawable/background_top3"
         tools:layout_editor_absoluteX="-59dp"
@@ -55,11 +43,130 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="418dp"
-        android:layout_height="354dp"
-        android:background="@drawable/valuec"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="214dp" />
+        android:layout_width="291dp"
+        android:layout_height="182dp"
+        android:background="@drawable/valuec_shape"
+        android:elevation="5dp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="108dp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="291dp"
+        android:layout_height="58dp"
+        android:background="@drawable/valuec_shape"
+        android:elevation="10dp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="320dp" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="291dp"
+        android:layout_height="61dp"
+        android:background="@drawable/valuec_shape"
+        android:elevation="10dp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="256dp"
+        android:layout_height="58dp"
+        android:elevation="10dp"
+        android:background="@drawable/valuec_shape"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="480dp" />
+
+    <TextView
+        android:id="@+id/subtitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:text="R$"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/subtitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.000,00"
+        android:elevation="5dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="158dp" />
+
+    <TextView
+        android:id="@+id/fpsswd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custo de vida: OUT/23"
+        android:elevation="5dp"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:background="@drawable/categories_shape"
+        android:elevation="10dp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:elevation="10dp
+"
+        android:background="@drawable/categories_shape2"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <TextView
+        android:id="@+id/greetings5"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:elevation="10dp"
+        android:text="Categoria Despesas"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <TextView
+        android:id="@+id/greetings6"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:elevation="10dp"
+        android:text="Adicionar despesas"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/baseline_checklist_rtl_24"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/baseline_add_home_24"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="243dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
