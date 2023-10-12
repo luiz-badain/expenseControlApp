@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bregister2"
+        android:layout_width="302dp"
+        android:layout_height="57dp"
+        android:background="@drawable/background_buttonR"
+        android:drawableEnd="@drawable/arrow3"
+        android:paddingStart="20dp"
+        android:text="Atualizar"
+        android:textAlignment="textStart"
+        android:textColor="@color/blue"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="659dp" />
+
+    <View
+        android:id="@+id/topcolor3"
+        android:layout_width="406dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top3"
+        tools:layout_editor_absoluteX="-59dp"
+        tools:layout_editor_absoluteY="-154dp" />
+
+    <View
+        android:id="@+id/topcolor2"
+        android:layout_width="409dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top2"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="-154dp" />
+
+    <View
+        android:id="@+id/topcolor4"
+        android:layout_width="413dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top4"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="-155dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="61dp"
+        app:srcCompat="@drawable/iconedin2"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="418dp"
+        android:layout_height="354dp"
+        android:background="@drawable/valuec"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

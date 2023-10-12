@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bregister2"
+        android:layout_width="302dp"
+        android:layout_height="57dp"
+        android:background="@drawable/background_buttonR"
+        android:drawableEnd="@drawable/arrow3"
+        android:paddingStart="20dp"
+        android:text="Atualizar"
+        android:textAlignment="textStart"
+        android:textColor="@color/blue"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="659dp" />
+
+    <EditText
+        android:id="@+id/name2"
+        android:layout_width="302dp"
+
+        android:layout_height="40dp"
+        android:backgroundTint="@color/blue"
+        android:ems="10"
+        android:hint="aqui vai seu custo de vida"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="560dp" />
+
+    <TextView
+        android:id="@+id/greetings4"
+        android:layout_width="298dp"
+        android:layout_height="73dp"
+        android:text="@string/expenses2"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="453dp" />
+
+    <View
+        android:id="@+id/topcolor3"
+        android:layout_width="406dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top3"
+        tools:layout_editor_absoluteX="-76dp"
+        tools:layout_editor_absoluteY="-74dp" />
+
+    <View
+        android:id="@+id/topcolor2"
+        android:layout_width="409dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top2"
+        tools:layout_editor_absoluteX="-46dp"
+        tools:layout_editor_absoluteY="-97dp" />
+
+    <View
+        android:id="@+id/topcolor4"
+        android:layout_width="413dp"
+        android:layout_height="368dp"
+        android:background="@drawable/background_top4"
+        tools:layout_editor_absoluteX="-120dp"
+        tools:layout_editor_absoluteY="-113dp"
+
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="251dp"
+        android:layout_height="175dp"
+        android:padding="40dp"
+        android:text="@string/expenses"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="85dp"
+        app:srcCompat="@drawable/iconedin2"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custo de Vida"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="305dp" />
+
+    <TextView
+        android:id="@+id/greetings3"
+        android:layout_width="299dp"
+        android:layout_height="52dp"
+        android:text="@string/greetings"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

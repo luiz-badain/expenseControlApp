@@ -3,4 +3,7 @@
     <style name="gradiantBotton">
         <item name="android:background">@drawable/background_button</item>
     </style>
+    <style name="blue">
+        <item name="android:color">@color/blue</item>
+    </style>
 </resources>

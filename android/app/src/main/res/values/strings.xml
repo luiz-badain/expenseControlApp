@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Android</string>
     <string name="welcome">SEJA BEM-VINDO!</string>
+    <string name="expenses">Organize suas despesas!</string>
+    <string name="register">Cadastrar</string>
+    <string name="name">Nome</string>
+    <string name="Fpsswd">Esqueceu a senha</string>
+    <string name="greetings">Seja bem vindo ao nosso controle de Despesas. </string>
+    <string name="expenses2">Aqui você pode gerenciar seus gatos e compreender seus comportamentos financeiros</string>
+    <string name="cost">Siga as etapas a seguir para calcularmos seu Custo de Vida!</string>
+    <string name="cost2">Aqui iremos te ajudar a entender qual é o seu custo de vida </string>
+
 
 </resources>
