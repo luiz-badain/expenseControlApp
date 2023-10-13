@@ -5,11 +5,15 @@ const router = express.Router();
 const userLogin = require('./controllers/userLoginController.js');
 const expense = require('./controllers/expenseController.js');
 const category = require('./controllers/categoryController.js');
+const {authenticated} = require('./middleware/authenticated.js');
 
 router.get('/', (req, res) => res.send('Hello world'));
 
 // Rotas do CRUD de Usuário
 router.post('/user/add', userLogin.add); // adiciona Usuário
+router.post('/user/login', userLogin.login); // Login do usuário
+router.get('/user/login/success', authenticated, userLogin.loginSuccess); // Rota que só pode ser acessada caso esteja logado com um usuário na sessão, você só precisa colocar o "authenticated," no meio da função da rota para funcionar
+router.get('/user/login/failure', userLogin.loginFailure); // Rota de falha, ela não é necessária como a de sucesso também não é
 router.get('/user/all', userLogin.all); // Retorna todos os Usuários
 router.get('/user/:id', userLogin.specific); // retorna um usuário baseado em seu id
 router.put('/user/:id', userLogin.update); // atualiza os dados do usuário

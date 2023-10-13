@@ -1,14 +1,32 @@
-
 const UserLogin = require('../models').UserLogin;
-
-
+const bcrypt = require('bcrypt');
+const passport = require('passport');
 
 //Cadastra Autor (POST)
 const add = async (req, res) => {
     const { userName, userEmail, userPassword, costOfLiving, totalIncomeUser } = req.body;
-    const user = await UserLogin.create({ userName, userEmail, userPassword, costOfLiving, totalIncomeUser });
+    const salt = await bcrypt.genSalt(10); //Essa função gera um número aleatório que é adicionado a senha para aumentar a segurança da criptografia
+    const passwordHash = await bcrypt.hash(userPassword, salt);//Criptografa a senha passa para a constante
+    const user = await UserLogin.create({ userName, userEmail, userPassword: passwordHash, costOfLiving, totalIncomeUser });
     res.status(200).json({ message: 'Cadastrado com sucesso', user });
 };
+
+//Realiza o login e dependo do resultado redireciona para uma rota especifica
+const login = async (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/user/login/Success',
+        failureRedirect: '/user/login/failure'
+    })(req, res, next);
+};
+//Se o login tiver sucesso
+const loginSuccess = async (req, res) => {
+    return res.status(200).json({message: 'Usuário logado com sucesso'});
+}
+
+//Se o login falhar
+const loginFailure = async (req, res) => {
+    return res.status(401).json({message: 'Credenciais incorretas!'})
+}
 
 //Busca todos os usuários (GET)
 const all = async (req, res) => {
@@ -47,6 +65,9 @@ const del = async (req, res) => {
 
 module.exports = {
     add,
+    login,
+    loginSuccess,
+    loginFailure,
     all,
     specific,
     update,
