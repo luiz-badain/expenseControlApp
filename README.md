@@ -66,12 +66,18 @@ select ce.id, ce.fk_Category_id, c.categoryName, ce.fk_Expense_id, e.expenseName
 inner join categories as c on c.id = ce.fk_Category_id
 inner join expenses as e on e.id = ce.fk_Expense_id;
 
+CREATE VIEW income_category AS
+select ci.id, ci.fk_Category_id, c.categoryName, ci.fk_Income_id, i.incomeName, i.valueIncome from categoryincomes as ci
+inner join categories as c on c.id = ci.fk_Category_id
+inner join incomes as i on i.id = ci.fk_Income_id;
+
 CREATE VIEW category_tag AS
 select ct.id, ct.fk_Category_id, c.categoryName, ct.fk_Tag_id, t.tagName  from categorytags as ct
 inner join categories as c on c.id = ct.fk_Category_id
 inner join tags as t on t.id = ct.fk_Tag_id;
 
 ```
+
 - Triggers USER EXPENSE
 ```sql
 

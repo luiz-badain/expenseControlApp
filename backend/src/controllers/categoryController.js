@@ -3,9 +3,9 @@ const { Op } = require('sequelize');
 
 const Category = require('../models').Category;
 const CategoryExpense = require('../models').CategoryExpense;
+const CategoryIncome = require('../models').CategoryIncome;
 const CategoryTag = require('../models').CategoryTag;
 const Tag = require('../models').Tag;
-const CategoryIncome = require('../models').CategoryIncome;
 
 const add = async (req, res) => {
     const { categoryName } = req.body;
@@ -30,6 +30,21 @@ const addCategoryExpense = async (req, res) => {
     } catch (error) {
         console.error('Erro ao cadastrar categoria de despeza:', error);
         res.status(500).json({ message: 'Erro ao cadastrar categoria de despeza' });
+    }
+};
+
+const addCategoryIncome = async (req, res) => {
+    const { id } = req.params;
+    const { categoryName } = req.body;
+
+    try {
+        const category = await Category.create({ categoryName });
+        const idCategory = category.id;
+        const categoryIncome = await CategoryIncome.create({ fk_Category_id: idCategory, fk_Income_id: id });
+        res.status(200).json({ message: 'Categoria Cadastrada com sucesso', categoryIncome });
+    } catch (error) {
+        console.error('Erro ao cadastrar categoria de renda', error);
+        res.status(500).json({ message: 'Erro ao cadastrar categoria de renda', error });
     }
 };
 
@@ -95,6 +110,25 @@ const categoriesByExpense = async (req, res) => {
     }
 };
 
+const categoriesByIncome = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const categoryIncomes = await CategoryIncome.sequelize.query(
+            `SELECT * FROM income_category WHERE fk_Income_id = :id`,
+            {
+                type: CategoryIncome.sequelize.QueryTypes.SELECT,
+                replacements: { id },
+            }
+        );
+
+        res.status(200).json(categoryIncomes);
+    } catch (error) {
+        console.error('Erro ao buscar categorias', error);
+        res.status(500).json({ message: 'Erro ao buscar categorias' });
+    }
+};
+
 //Altera Categoria por ID (PUT)
 const update = async (req, res) => {
     const { categoryName } = req.body;
@@ -129,6 +163,24 @@ const deleteCategoryExpense = async (req, res) => {
     } catch (error) {
         console.error('Erro ao excluir categoria de despesa:', error);
         res.status(500).json({ message: 'Erro ao excluir categoria de despesa', error });
+    }
+};
+
+const deleteCategoryIncome = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const categoryIncome = await CategoryIncome.findByPk(id);
+        if (!categoryIncome) {
+            return res.status(404).json({ message: 'Categoria de renda não encontrada' });
+        }
+
+        await CategoryIncome.destroy({ where: { id: id } });
+
+        res.status(200).json({ message: 'Categoria de Renda excluída com sucesso' })
+    } catch (error) {
+        console.error('Erro ao excluir categoria de renda:', error);
+        res.status(500).json({ message: 'Erro ao excluir categoria de renda', error });
     }
 };
 
@@ -309,13 +361,16 @@ const deleteCategoryTag = async (req, res) => {
 module.exports = {
     add,
     addCategoryExpense,
+    addCategoryIncome,
     all,
     categoryById,
     categoryByName,
     categoriesByExpense,
+    categoriesByIncome,
     update,
     del,
     deleteCategoryExpense,
+    deleteCategoryIncome,
     addTag,
     addCategoryTag,
     allTags,

@@ -36,16 +36,19 @@ router.delete('/income/:id', income.del);
 // Rotas do CRUD de Categoria
 router.post('/category/add', category.add); // adiciona Categoria
 router.post('/category-expense/:id', category.addCategoryExpense); // Cadastrar categoria de despeza
+router.post('/category-income/:id', category.addCategoryIncome); // Cadastrar categoria de renda
 
 router.get('/category/all', category.all); // Retorna todas as Categorias
 router.get('/category/:id', category.categoryById); // Retorna  a Categoria pelo id
 router.get('/category/name/:categoryName', category.categoryByName); // Retorna  a Categoria pelo nome
 router.get('/category-expense/:id', category.categoriesByExpense); // Retorna as Categorias de uma despeza
+router.get('/category-income/:id', category.categoriesByIncome); // Retorna as Categorias de uma renda
 
 // router.get('/category/:id', category.specific); // retorna uma Categoria baseado em seu id
 router.put('/category/:id', category.update); // atualiza os dados da Categoria
 
 router.delete('/category-expense/:id', category.deleteCategoryExpense); // deleta uma Categoria de despeza
+router.delete('/category-income/:id', category.deleteCategoryIncome); // deleta uma Categoria de renda
 router.delete('/category/:id', category.del); // deleta uma Categoria
 
 // Tag e Tag de categoria
