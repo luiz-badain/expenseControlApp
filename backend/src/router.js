@@ -26,10 +26,27 @@ router.delete('/expense/:id', expense.del); // delete uma despeza e a despeza do
 router.post('/category/add', category.add); // adiciona Categoria
 router.post('/category-expense/:id', category.addCategoryExpense); // Cadastrar categoria de despeza
 
-router.get('/category/all', category.all); // Retorna todos as Categorias
-router.get('/category-expense/:id', category.allExpenseCategories); // Retorna todos as Categorias de uma despeza
+router.get('/category/all', category.all); // Retorna todas as Categorias
+router.get('/category/:id', category.categoryById); // Retorna  a Categoria pelo id
+router.get('/category/name/:categoryName', category.categoryByName); // Retorna  a Categoria pelo nome
+router.get('/category-expense/:id', category.categoriesByExpense); // Retorna as Categorias de uma despeza
+
 // router.get('/category/:id', category.specific); // retorna uma Categoria baseado em seu id
-// router.put('/category/:id', category.update); // atualiza os dados da Categoria
-// router.delete('/category/:id', category.del); // delete uma Categoria
+router.put('/category/:id', category.update); // atualiza os dados da Categoria
+
+router.delete('/category-expense/:id', category.deleteCategoryExpense); // deleta uma Categoria de despeza
+router.delete('/category/:id', category.del); // deleta uma Categoria
+
+// Tag e Tag de categoria
+router.post('/tag/add', category.addTag); // adiciona Tag
+router.post('/category-tag/:id', category.addCategoryTag); // adiciona Tag de categoria
+router.get('/tag/all', category.allTags); // Retorna todas as Tags
+router.get('/tag/:id', category.TagById); // Retorna  a Tag pelo id
+router.get('/tag/name/:TagName', category.TagByName); // Retorna  a Tag pelo nome
+router.get('/category-tag/:id', category.tagsByCategory); // busca as tags por categorias
+router.put('/tag/:id', category.updateTag); // atualiza a Tag
+router.delete('/tag/:id', category.deleteTag); // Deleta a Tag
+router.delete('/category-tag/:id', category.deleteCategoryTag); // Deleta a Tag
+
 
 module.exports = router;

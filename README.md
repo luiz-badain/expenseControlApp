@@ -48,7 +48,7 @@ npx sequelize db:migrate
 
 O sistema exige que algumas views sejam criadas no banco de dados, são elas:
 
-- USER EXPENSE, EXPENSE CATEGORY
+- USER EXPENSE, EXPENSE CATEGORY, CATEGORY TAG
 ```sql
 
 CREATE VIEW user_expense AS
@@ -60,6 +60,11 @@ CREATE VIEW expense_category AS
 select ce.id, ce.fk_Category_id, c.categoryName, ce.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense  from categoryexpenses as ce
 inner join categories as c on c.id = ce.fk_Category_id
 inner join expenses as e on e.id = ce.fk_Expense_id;
+
+CREATE VIEW category_tag AS
+select ct.id, ct.fk_Category_id, c.categoryName, ct.fk_Tag_id, t.tagName  from categorytags as ct
+inner join categories as c on c.id = ct.fk_Category_id
+inner join tags as t on t.id = ct.fk_Tag_id;
 
 ```
 - Triggers USER EXPENSE
