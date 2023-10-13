@@ -58,7 +58,8 @@ inner join expenses as e on e.id = eu.fk_Expense_id;
 
 CREATE VIEW user_income AS
 select ui.id, ui.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, ui.fk_Income_id, i.incomeName, i.valueIncome 
-from userincomes as ui inner join userlogins as ul on ul.id = ui.fk_UserLogin_id
+from userincomes as ui
+inner join userlogins as ul on ul.id = ui.fk_UserLogin_id
 inner join incomes as i on i.id = ui.fk_Income_id;
 
 CREATE VIEW expense_category AS
