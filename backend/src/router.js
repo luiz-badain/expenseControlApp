@@ -4,6 +4,7 @@ const router = express.Router();
 //importações
 const userLogin = require('./controllers/userLoginController.js');
 const expense = require('./controllers/expenseController.js');
+const income = require('./controllers/incomeController.js');
 const category = require('./controllers/categoryController.js');
 const {authenticated} = require('./middleware/authenticated.js');
 
@@ -25,6 +26,12 @@ router.get('/user-expense/:id', expense.expenseByUser); // Retorna todas as desp
 // router.get('/user-expense/all', expense.allByUser); // retorna todas as despezas dos usuários
 router.put('/expense/:id', expense.update); // atualiza os dados da despeza do usuário
 router.delete('/expense/:id', expense.del); // delete uma despeza e a despeza do usuário
+
+// Rotas do CRUD de Rendas
+router.post('/user-income/add/:id', income.add);
+router.get('/user-income/:id', income.incomeByUser);
+router.put('/income/:id', income.update);
+router.delete('/income/:id', income.del);
 
 // Rotas do CRUD de Categoria
 router.post('/category/add', category.add); // adiciona Categoria
