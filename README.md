@@ -56,6 +56,11 @@ select eu.id, eu.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul
 inner join userlogins as ul on ul.id = eu.fk_UserLogin_id
 inner join expenses as e on e.id = eu.fk_Expense_id;
 
+CREATE VIEW user_income AS
+select ui.id, ui.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, ui.fk_Income_id, i.incomeName, i.valueIncome 
+from userincomes as ui inner join userlogins as ul on ul.id = ui.fk_UserLogin_id
+inner join incomes as i on i.id = ui.fk_Income_id;
+
 CREATE VIEW expense_category AS
 select ce.id, ce.fk_Category_id, c.categoryName, ce.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense  from categoryexpenses as ce
 inner join categories as c on c.id = ce.fk_Category_id
@@ -98,6 +103,39 @@ END$
 
 DELIMITER ;
 ```
+
+- Triggers USER INCOME
+```sql
+
+DELIMITER $
+
+CREATE TRIGGER Tgr_totalIncomeUser_Insert AFTER INSERT
+ON UserIncomes
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, Incomes as i SET ul.totalIncomeUser = ul.totalIncomeUser + i.valueIncome
+WHERE ul.id = NEW.fk_UserLogin_id and i.id = NEW.fk_Income_id;
+END$
+
+CREATE TRIGGER Tgr_totalIncomeUser_Update AFTER UPDATE
+ON Incomes
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, UserIncomes as ui SET ul.totalIncomeUser = ul.totalIncomeUser + NEW.valueIncome - OLD.valueIncome
+WHERE ul.id = ui.fk_UserLogin_id and new.id = ui.fk_Income_id;
+END$
+
+CREATE TRIGGER Tgr_totalIncomeUser_Delete AFTER DELETE
+ON UserIncomes
+FOR EACH ROW
+BEGIN
+	UPDATE UserLogins as ul, Incomes as i SET ul.totalIncomeUser = ul.totalIncomeUser - i.valueIncome
+WHERE ul.id = OLD.fk_UserLogin_id and i.id = OLD.fk_Income_id;
+END$
+
+DELIMITER ;
+```
+
 ### 2.3 Configure o Backend NODE + EXPRESS: ESLINT
 
 ```powershell
