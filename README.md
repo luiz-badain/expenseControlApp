@@ -51,7 +51,7 @@ npx sequelize db:migrate
 
 O sistema exige que algumas views sejam criadas no banco de dados, são elas:
 
-- USER EXPENSE, EXPENSE CATEGORY, CATEGORY TAG
+- USER EXPENSE, EXPENSE CATEGORY, CATEGORY TAG, USER INCOME and INCOME CATEGORY
 ```sql
 
 CREATE VIEW user_expense AS
