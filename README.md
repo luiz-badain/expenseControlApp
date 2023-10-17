@@ -39,6 +39,9 @@ npm install --save body-parser
 npm install --save mysql2
 npm install --save-dev sequelize-cli
 npm install dotenv
+npm install express-session --save
+npm install passport passport-local --save
+npm install bcrypt
 npm install cors -i
 
 npx sequelize db:create
