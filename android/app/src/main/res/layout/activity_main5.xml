@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bregister2"
+        android:id="@+id/bupdate"
         android:layout_width="302dp"
         android:layout_height="57dp"
-        android:background="@drawable/background_buttonR"
+        android:background="@drawable/background_button_register"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Atualizar"
@@ -80,7 +80,7 @@
         tools:layout_editor_absoluteY="104dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dollar"
         android:layout_width="64dp"
         android:layout_height="85dp"
         app:srcCompat="@drawable/iconedin2"

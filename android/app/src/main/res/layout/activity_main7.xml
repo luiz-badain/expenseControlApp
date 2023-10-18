@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteY="-8dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dollar"
         android:layout_width="56dp"
         android:layout_height="61dp"
         app:srcCompat="@drawable/iconedin2"
@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteY="35dp" />
 
     <View
-        android:id="@+id/view5"
+        android:id="@+id/box1"
         android:layout_width="316dp"
         android:layout_height="67dp"
         android:background="@drawable/valuec_shape"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="320dp" />
 
     <View
-        android:id="@+id/view6"
+        android:id="@+id/box2"
         android:layout_width="316dp"
         android:layout_height="67dp"
         android:background="@drawable/valuec_shape"
@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="416dp" />
 
     <View
-        android:id="@+id/view7"
+        android:id="@+id/box3"
         android:layout_width="316dp"
         android:layout_height="67dp"
         android:background="@drawable/valuec_shape"
@@ -82,7 +82,7 @@
         tools:layout_editor_absoluteY="511dp" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/box4"
         android:layout_width="316dp"
         android:layout_height="67dp"
         android:background="@drawable/valuec_shape"
@@ -91,7 +91,7 @@
         tools:layout_editor_absoluteY="605dp" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/Gbox"
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:background="@drawable/categories_shape"
@@ -100,7 +100,7 @@
         tools:layout_editor_absoluteY="134dp" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/Rbox"
         android:layout_width="105dp"
         android:layout_height="107dp"
         android:background="@drawable/categories_shape2"
@@ -109,7 +109,7 @@
         tools:layout_editor_absoluteY="134dp" />
 
     <TextView
-        android:id="@+id/greetings5"
+        android:id="@+id/categories1"
         android:layout_width="67dp"
         android:layout_height="35dp"
         android:elevation="10dp"
@@ -120,7 +120,7 @@
         tools:layout_editor_absoluteY="186dp" />
 
     <TextView
-        android:id="@+id/greetings6"
+        android:id="@+id/categories2"
         android:layout_width="67dp"
         android:layout_height="35dp"
         android:elevation="10dp"
@@ -131,7 +131,7 @@
         tools:layout_editor_absoluteY="191dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/icon_chklist"
         android:layout_width="45dp"
         android:layout_height="35dp"
         android:elevation="10dp"
@@ -140,7 +140,7 @@
         tools:layout_editor_absoluteY="151dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/icon_house"
         android:layout_width="45dp"
         android:layout_height="35dp"
         android:elevation="10dp"

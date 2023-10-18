@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="3dp" />
 
     <View
-        android:id="@+id/topcolor4"
+        android:id="@+id/topcolor5"
         android:layout_width="413dp"
         android:layout_height="368dp"
         android:background="@drawable/background_top4"
@@ -53,7 +53,7 @@
         />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
@@ -63,7 +63,7 @@
         tools:layout_editor_absoluteY="157dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dollar"
         android:layout_width="64dp"
         android:layout_height="85dp"
         app:srcCompat="@drawable/iconedin2"
@@ -86,16 +86,16 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Bregister"
-        android:background="@drawable/background_buttonR"
         android:layout_width="327dp"
         android:layout_height="59dp"
+        android:background="@drawable/background_buttonR"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Cadastrar"
         android:textAlignment="textStart"
         android:textColor="@color/blue"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="507dp" />
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="557dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

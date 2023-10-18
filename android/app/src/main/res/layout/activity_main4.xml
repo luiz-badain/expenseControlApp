@@ -46,7 +46,7 @@
         android:id="@+id/bregister"
         android:layout_width="327dp"
         android:layout_height="59dp"
-        android:background="@drawable/background_buttonN"
+        android:background="@drawable/background_button_new"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Cadastrar"
@@ -67,7 +67,7 @@
         tools:layout_editor_absoluteY="104dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dollar"
         android:layout_width="64dp"
         android:layout_height="85dp"
         app:srcCompat="@drawable/iconedin2"
@@ -107,7 +107,7 @@
         tools:layout_editor_absoluteY="345dp" />
 
     <TextView
-        android:id="@+id/greetings2"
+        android:id="@+id/greetings3"
         android:layout_width="298dp"
         android:layout_height="73dp"
         android:text="@string/cost"
