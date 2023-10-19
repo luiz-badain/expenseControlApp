@@ -39,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/topcolor3"
@@ -84,10 +84,10 @@
         android:background="@drawable/background_top4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.397"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/title"
@@ -109,9 +109,13 @@
         android:id="@+id/dollar"
         android:layout_width="64dp"
         android:layout_height="85dp"
-        app:srcCompat="@drawable/iconedin2"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="47dp" />
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/iconedin2" />
 
     <EditText
         android:id="@+id/name"
@@ -151,14 +155,19 @@
         android:id="@+id/Bregister"
         android:layout_width="327dp"
         android:layout_height="59dp"
+        android:layout_marginTop="381dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/background_button_register"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Cadastrar"
         android:textAlignment="textStart"
         android:textColor="@color/blue"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="626dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topcolor3"
+        app:layout_constraintVertical_bias="0.85" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

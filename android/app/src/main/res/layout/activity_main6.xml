@@ -6,88 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <View
         android:id="@+id/topcolor3"
         android:layout_width="406dp"
 
         android:layout_height="368dp"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="-200dp"
         android:background="@drawable/background_top3"
-        tools:layout_editor_absoluteX="-59dp"
-        tools:layout_editor_absoluteY="-154dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
 
     <View
         android:id="@+id/downcolor3"
         android:layout_width="409dp"
         android:layout_height="189dp"
+        android:layout_marginStart="-200dp"
+        android:layout_marginBottom="-200dp"
         android:background="@drawable/background_top3"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853" />
 
     <View
         android:id="@+id/topcolor2"
         android:layout_width="409dp"
         android:layout_height="368dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginEnd="-200dp"
         android:background="@drawable/background_top2"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="-154dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
 
     <View
         android:id="@+id/downcolor2"
         android:layout_width="429dp"
         android:layout_height="189dp"
+        android:layout_marginEnd="-200dp"
+        android:layout_marginBottom="-200dp"
         android:background="@drawable/background_top2"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
 
     <View
         android:id="@+id/topcolor4"
         android:layout_width="413dp"
         android:layout_height="368dp"
-        android:background="@drawable/background_top4"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="-155dp"
 
-        />
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-200dp"
+        android:layout_marginEnd="-50dp"
+        android:background="@drawable/background_top4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
 
     <View
         android:id="@+id/downcolor4"
         android:layout_width="453dp"
         android:layout_height="298dp"
+        android:layout_marginBottom="-200dp"
         android:background="@drawable/background_top4"
-        tools:layout_editor_absoluteX="-21dp"
-        tools:layout_editor_absoluteY="635dp"
 
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bregister2"
         android:layout_width="299dp"
         android:layout_height="46dp"
-        android:background="@drawable/background_buttonS"
+        android:layout_marginTop="148dp"
+        android:background="@drawable/background_buttons"
         android:drawableStart="@drawable/icon_search"
         android:hint="Pesquisar"
         android:paddingStart="20dp"
         android:textAlignment="textStart"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="660dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/dollar"
         android:layout_width="56dp"
         android:layout_height="61dp"
-        app:srcCompat="@drawable/iconedin2"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="35dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/iconedin2" />
 
     <View
         android:id="@+id/box1"
         android:layout_width="319dp"
         android:layout_height="150dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/valuec_shape"
         android:elevation="5dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="110dp" />
+        app:layout_constraintBottom_toTopOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/value"
@@ -97,19 +143,28 @@
         android:text="5.000,00"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toTopOf="@+id/cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="101dp"
         android:elevation="5dp"
         android:text="Custo de vida: OUT/23"
         android:textColor="@color/grey"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="200dp" />
+        app:layout_constraintBottom_toTopOf="@+id/box2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
         android:id="@+id/rs"
