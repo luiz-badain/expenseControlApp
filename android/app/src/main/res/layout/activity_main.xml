@@ -7,95 +7,121 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/topcolor4"
-        android:layout_width="413dp"
-        android:layout_height="368dp"
-        android:background="@drawable/background_top4"
-        tools:layout_editor_absoluteX="-14dp"
-        tools:layout_editor_absoluteY="-26dp"
-
-        />
-
-    <View
         android:id="@+id/topcolor3"
         android:layout_width="406dp"
         android:layout_height="368dp"
+        android:layout_marginStart="-250dp"
         android:background="@drawable/background_top3"
-        tools:layout_editor_absoluteX="-64dp"
-        tools:layout_editor_absoluteY="-5dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
 
     <View
         android:id="@+id/topcolor2"
         android:layout_width="409dp"
         android:layout_height="368dp"
+        android:layout_marginTop="-250dp"
         android:background="@drawable/background_top2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41000003" />
 
     <View
-        android:id="@+id/topcolor4"
+        android:id="@+id/topcolor5"
         android:layout_width="413dp"
         android:layout_height="368dp"
-        android:background="@drawable/background_top4"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="-26dp"
+        android:layout_marginTop="-250dp"
+        android:layout_marginEnd="-250dp"
 
-        />
+        android:background="@drawable/background_top4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34" />
 
     <View
         android:id="@+id/topcolor"
         android:layout_width="416dp"
         android:layout_height="367dp"
-        android:background="@drawable/background_top"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-75dp"
+        android:layout_marginTop="-250dp"
 
-        />
+        android:background="@drawable/background_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
         android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Blogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dollar"
+        app:layout_constraintVertical_bias="0.47000003" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/dollar"
         android:layout_width="64dp"
         android:layout_height="85dp"
-        app:srcCompat="@drawable/iconedin2"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="47dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066"
+        app:srcCompat="@drawable/iconedin2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Blogin"
         style="@style/gradiantBotton"
         android:layout_width="324dp"
         android:layout_height="61dp"
+        android:layout_marginBottom="84dp"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Login"
         android:textAlignment="textStart"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="412dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Bregister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topcolor2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Bregister"
-        android:background="@drawable/background_buttonR"
         android:layout_width="327dp"
         android:layout_height="59dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/background_button_register"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Cadastrar"
         android:textAlignment="textStart"
         android:textColor="@color/blue"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="507dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topcolor3"
+        app:layout_constraintVertical_bias="0.55" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
