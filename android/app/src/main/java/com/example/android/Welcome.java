@@ -1,10 +1,13 @@
 package com.example.android;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 public class Welcome extends AppCompatActivity {
@@ -13,6 +16,9 @@ public class Welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        Window window = getWindow();
+        window.setStatusBarColor(Color.parseColor("#3498DB"));
 
         final Button register = (Button) findViewById(R.id.Bregister);
         final Button login = (Button) findViewById(R.id.Blogin);
