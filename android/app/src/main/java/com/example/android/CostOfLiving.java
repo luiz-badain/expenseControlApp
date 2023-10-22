@@ -19,7 +19,7 @@ public class CostOfLiving extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CostOfLiving.this, MainScreen.class);
+                Intent intent = new Intent(CostOfLiving.this, ExpenseCategory.class);
                 startActivity(intent);
             }
         });

@@ -9,6 +9,6 @@ public class ExpenseCategory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expensecategory);
+        setContentView(R.layout.activityexpensecategory);
     }
 }

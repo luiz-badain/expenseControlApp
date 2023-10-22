@@ -19,7 +19,7 @@
             android:name=".MainActivity8"
             android:exported="false" />
         <activity
-            android:name=".MainScreen"
+            android:name=".ExpenseCategory"
             android:exported="false" />
         <activity
             android:name=".CostOfLiving"
