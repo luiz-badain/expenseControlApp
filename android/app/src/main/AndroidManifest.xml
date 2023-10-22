@@ -13,19 +13,19 @@
         android:theme="@style/Theme.Android"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity7"
+            android:name=".ExpenseCategory"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6"
+            android:name=".MainScreen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".CostOfLiving"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".FirstSteps"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".Register"

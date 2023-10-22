@@ -12,7 +12,7 @@ public class Welcome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_welcome);
 
         final Button register = (Button) findViewById(R.id.Bregister);
         final Button login = (Button) findViewById(R.id.Blogin);
@@ -27,7 +27,7 @@ public class Welcome extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Welcome.this, MainActivity3.class);
+                Intent intent = new Intent(Welcome.this, Login.class);
                 startActivity(intent);
             }
         });
