@@ -23,11 +23,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/blogin"
-        style="@style/gradiantBotton"
         android:layout_width="324dp"
         android:layout_height="61dp"
         android:layout_marginTop="81dp"
         android:drawableEnd="@drawable/arrow3"
+        android:background="@drawable/background_button"
         android:paddingStart="20dp"
         android:text="Login"
         android:textAlignment="textStart"
