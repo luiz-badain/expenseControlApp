@@ -105,7 +105,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bregister2"
+        android:id="@+id/bsearch"
         android:layout_width="299dp"
         android:layout_height="46dp"
         android:layout_marginTop="50dp"
