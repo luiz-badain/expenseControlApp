@@ -102,10 +102,10 @@
         android:background="@drawable/background_top4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.984" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/value_of_search5"
@@ -505,15 +505,14 @@
         android:id="@+id/gbox2"
         android:layout_width="90dp"
         android:layout_height="80dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="448dp"
         android:background="@drawable/categories_shape"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.359" />
 
     <TextView
         android:id="@+id/categories4"
@@ -534,15 +533,14 @@
         android:id="@+id/rbox2"
         android:layout_width="91dp"
         android:layout_height="85dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="444dp"
         android:background="@drawable/categories_shape2"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
 
     <ImageView
         android:id="@+id/icon_house3"
