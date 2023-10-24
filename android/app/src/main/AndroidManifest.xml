@@ -18,6 +18,12 @@
             android:name=".Welcome"
             android:exported="false" />
         <activity
+            android:name=".MainActivity10"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity9"
+            android:exported="false" />
+        <activity
             android:name=".ExpenseCategory"
             android:exported="false" />
         <activity
