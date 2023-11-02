@@ -10,12 +10,16 @@ Este app é um controle de gastos em que usa técnicas de finanças pessoais par
 
 Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
-## Requisitos Prévios
+## Requisitos Prévios [SEM DOCKER]
 
 - Node.js e npm instalados. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
 - MySQL: A configuração é local, mas pode ser facilmente reconfigurada no arquivo backend/config/config.json
     - [mySQL download](https://dev.mysql.com/downloads/installer/)
     - [Interface Workbench](https://dev.mysql.com/downloads/workbench/)
+
+## [COM DOCKER]
+
+- MySQL IMAGE: Pode acessar o DockerHub e pegar a ultimaversão disponível em [hub.docker.com](https://hub.docker.com/_/mysql).
 
 ## Instalação
 
@@ -32,17 +36,7 @@ git clone https://github.com/VilarimLucas/expenseControlApp.git
 
 cd expenseControlApp/backend/src
 
-npm install express --save
-npm install -g nodemon
-npm install --save sequelize
-npm install --save body-parser
-npm install --save mysql2
-npm install --save-dev sequelize-cli
-npm install dotenv
-npm install express-session --save
-npm install passport passport-local --save
-npm install bcrypt
-npm install cors -i
+npm install 
 
 npx sequelize db:create
 npx sequelize db:migrate
