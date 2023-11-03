@@ -26,7 +26,6 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 ```wsl
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 11376:3306 -d mysql:8.2
 ```
-Caso apareça erro, verifique se o serviço de mysql está rodando em sua máquina e substitua a porta em que este serviço roda ex.: 11376:3306
 
 - NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node).
 
@@ -65,30 +64,33 @@ O sistema exige que algumas views sejam criadas no banco de dados, são elas:
 - USER EXPENSE, EXPENSE CATEGORY, CATEGORY TAG, USER INCOME and INCOME CATEGORY
 ```sql
 
+use expenseControlApp;
+
 CREATE VIEW user_expense AS
-select eu.id, eu.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, eu.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense from expenseusers as eu
-inner join userlogins as ul on ul.id = eu.fk_UserLogin_id
-inner join expenses as e on e.id = eu.fk_Expense_id;
+select eu.id, eu.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, eu.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense from ExpenseUsers as eu
+inner join UserLogins as ul on ul.id = eu.fk_UserLogin_id
+inner join Expenses as e on e.id = eu.fk_Expense_id;
 
 CREATE VIEW user_income AS
-select ui.id, ui.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, ui.fk_Income_id, i.incomeName, i.valueIncome from userincomes as ui
-inner join userlogins as ul on ul.id = ui.fk_UserLogin_id
-inner join incomes as i on i.id = ui.fk_Income_id;
+select ui.id, ui.fk_UserLogin_id, ul.userName, ul.userEmail, ul.userPassword, ul.costOfLiving, ul.totalIncomeUser, ui.fk_Income_id, i.incomeName, i.valueIncome from UserIncomes as ui
+inner join UserLogins as ul on ul.id = ui.fk_UserLogin_id
+inner join Incomes as i on i.id = ui.fk_Income_id;
 
 CREATE VIEW expense_category AS
-select ce.id, ce.fk_Category_id, c.categoryName, ce.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense  from categoryexpenses as ce
-inner join categories as c on c.id = ce.fk_Category_id
-inner join expenses as e on e.id = ce.fk_Expense_id;
+select ce.id, ce.fk_Category_id, c.categoryName, ce.fk_Expense_id, e.expenseName, e.isFixedExpense, e.isVariableExpense, e.valueExpense  from CategoryExpenses as ce
+inner join Categories as c on c.id = ce.fk_Category_id
+inner join Expenses as e on e.id = ce.fk_Expense_id;
 
 CREATE VIEW income_category AS
-select ci.id, ci.fk_Category_id, c.categoryName, ci.fk_Income_id, i.incomeName, i.valueIncome from categoryincomes as ci
-inner join categories as c on c.id = ci.fk_Category_id
-inner join incomes as i on i.id = ci.fk_Income_id;
+select ci.id, ci.fk_Category_id, c.categoryName, ci.fk_Income_id, i.incomeName, i.valueIncome from CategoryIncomes as ci
+inner join Categories as c on c.id = ci.fk_Category_id
+inner join Incomes as i on i.id = ci.fk_Income_id;
 
 CREATE VIEW category_tag AS
-select ct.id, ct.fk_Category_id, c.categoryName, ct.fk_Tag_id, t.tagName  from categorytags as ct
-inner join categories as c on c.id = ct.fk_Category_id
-inner join tags as t on t.id = ct.fk_Tag_id;
+select ct.id, ct.fk_Category_id, c.categoryName, ct.fk_Tag_id, t.tagName  from CategoryTags as ct
+inner join Categories as c on c.id = ct.fk_Category_id
+inner join Tags as t on t.id = ct.fk_Tag_id;
+
 
 ```
 
