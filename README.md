@@ -25,6 +25,7 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
 ```wsl
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 11376:3306 -d mysql:8.2
+
 ```
 
 - NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node).
