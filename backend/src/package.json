@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "dataInicialize": "npx sequelize db:create & npx sequelize db:migrate & npx nodemon server.js",
     "dev": "npx nodemon server.js"
   },
   "author": "",
