@@ -10,7 +10,12 @@ Este app é um controle de gastos em que usa técnicas de finanças pessoais par
 
 Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
+### 1. Clone o Repositório
 
+
+```bash
+git clone https://github.com/VilarimLucas/expenseControlApp.git
+```
 
 ## [COM DOCKER]
 
@@ -37,12 +42,7 @@ docker run -p 4000:4000 node
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento do backend.
 
-### 1. Clone o Repositório
 
-
-```bash
-git clone https://github.com/VilarimLucas/expenseControlApp.git
-```
 ### 2.1 Configure o Backend NODE + EXPRESS
 ```powershell
 
@@ -211,7 +211,7 @@ npm start
     - [mySQL download](https://dev.mysql.com/downloads/installer/)
     - [Interface Workbench](https://dev.mysql.com/downloads/workbench/)
 
-	*Caso opte por não utilizar docker, será necessário reconfigurar a porta de banco de dados disponível no caminho abaixo:
+	*Caso opte por não utilizar docker, será necessário reconfigurar a porta de banco de dados disponível no caminho abaixo depois que o repositório git for clonado com o comando mencionado acima:
 
 	```powershell
 	cd expenseControlApp/backend/src/config/config.json
