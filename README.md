@@ -24,11 +24,11 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 11376:3306 -d mysql:8.2
 ```
 
 - NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node) ou executar os seguintes comandos em seu terminal:
--- Para buildar o node no repositório local.
+### Para buildar o node no repositório local.
 ```powershell
 docker build -t node .
 ```
---Para executar o backend na porta 4000:
+### Para executar o backend na porta 4000:
 ```powershell
 docker run -p 4000:4000 node
 ```
