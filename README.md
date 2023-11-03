@@ -10,12 +10,7 @@ Este app é um controle de gastos em que usa técnicas de finanças pessoais par
 
 Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
-## Requisitos Prévios [SEM DOCKER]
 
-- Node.js e npm instalados. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
-- MySQL: A configuração é local, mas pode ser facilmente reconfigurada no arquivo backend/config/config.json
-    - [mySQL download](https://dev.mysql.com/downloads/installer/)
-    - [Interface Workbench](https://dev.mysql.com/downloads/workbench/)
 
 ## [COM DOCKER]
 
@@ -28,7 +23,7 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 11376:3306 -d mysql:8.2
 
 ```
 
-- NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node).
+- NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node) ou executar os seguintes comandos:
 
 ```powershell
 docker build -t node .
@@ -209,7 +204,20 @@ npm run dev
 
 npm start
 ```
+## Requisitos Prévios [SEM DOCKER]
 
+- Node.js e npm instalados. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
+- MySQL: A configuração é local, mas pode ser facilmente reconfigurada no arquivo backend/config/config.json
+    - [mySQL download](https://dev.mysql.com/downloads/installer/)
+    - [Interface Workbench](https://dev.mysql.com/downloads/workbench/)
+
+	*Caso opte por não utilizar docker, será necessário reconfigurar a porta de banco de dados disponível no caminho abaixo:
+
+	```powershell
+
+cd expenseControlApp/backend/src/config/config.json
+
+```
 
 
 
