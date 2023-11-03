@@ -19,7 +19,24 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
 ## [COM DOCKER]
 
-- MySQL IMAGE: Pode acessar o DockerHub e pegar a ultimaversão disponível em [hub.docker.com](https://hub.docker.com/_/mysql).
+- Instalar o serviço de docker: 
+
+- MySQL IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/mysql).
+
+```wsl
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -p 11376:3306 -d mysql:8.2
+```
+Caso apareça erro, verifique se o serviço de mysql está rodando em sua máquina e substitua a porta em que este serviço roda ex.: 11376:3306
+
+- NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node).
+
+```powershell
+docker build -t node .
+```
+Para executar o backend:
+```powershell
+docker run --name backend -p 4040:4000 node
+```
 
 ## Instalação
 

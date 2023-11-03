@@ -1,5 +1,5 @@
 # Use a imagem base do Node.js
-FROM node:14
+FROM node:21-alpine3.17
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
@@ -11,8 +11,9 @@ RUN npm install
 # Copie o restante dos arquivos do aplicativo
 COPY . .
 
+
 # Exponha a porta que seu aplicativo está escutando
-EXPOSE 3000
+EXPOSE 4040
 
 # Comando para iniciar o aplicativo
 CMD ["npm", "start"]
