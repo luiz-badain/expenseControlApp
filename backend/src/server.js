@@ -1,4 +1,4 @@
 const app = require('./app');
-const port = 4040;
+const port = 4000;
 
 app.listen(port, () => console.log(`Servidor rodando porta ${port}!`));

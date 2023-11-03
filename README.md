@@ -34,7 +34,7 @@ docker build -t node .
 ```
 Para executar o backend:
 ```powershell
-docker run --name backend -p 4040:4000 node
+docker run -p 4000:4000 node
 ```
 
 ## Instalação
