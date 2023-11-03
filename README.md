@@ -214,10 +214,8 @@ npm start
 	*Caso opte por não utilizar docker, será necessário reconfigurar a porta de banco de dados disponível no caminho abaixo:
 
 	```powershell
-
-cd expenseControlApp/backend/src/config/config.json
-
-```
+	cd expenseControlApp/backend/src/config/config.json
+	```
 
 
 
