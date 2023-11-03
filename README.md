@@ -14,7 +14,7 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 
 ## [COM DOCKER]
 
-- Instalar o serviço de docker: 
+- Instalar o serviço de docker de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
 
 - MySQL IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/mysql).
 
