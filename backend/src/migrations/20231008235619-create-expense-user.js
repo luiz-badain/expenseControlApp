@@ -12,13 +12,13 @@ module.exports = {
       fk_UserLogin_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: 'userlogins', key: 'id'},
+        references: { model: 'UserLogins', key: 'id'},
         onDelete: 'CASCADE'
       },
       fk_Expense_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: 'expenses', key: 'id'},
+        references: { model: 'Expenses', key: 'id'},
         onDelete: 'CASCADE'
       },
       createdAt: {

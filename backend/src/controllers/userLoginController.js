@@ -44,8 +44,10 @@ const specific = async (req, res) => {
 //Altera usuário por ID (PUT)
 const update = async (req, res) => {
     const { userName, userEmail, userPassword, costOfLiving, totalIncomeUser } = req.body;
+    const salt = await bcrypt.genSalt(10); //Essa função gera um número aleatório que é adicionado a senha para aumentar a segurança da criptografia
+    const passwordHash = await bcrypt.hash(userPassword, salt);//Criptografa a senha passa para a constante
     await UserLogin.update(
-        { userName, userEmail, userPassword, costOfLiving, totalIncomeUser },
+        { userName, userEmail,  userPassword: passwordHash, costOfLiving, totalIncomeUser },
         {
             where: { id: req.params.id },
         }
