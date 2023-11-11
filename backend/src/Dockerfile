@@ -18,7 +18,7 @@ EXPOSE 4000
 
 # Comando para iniciar o aplicativo
 
-CMD ["npm", "run", "dataInicialize"]
+CMD ["npm", "run", "dev"]
 
 
 
