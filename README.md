@@ -209,13 +209,13 @@ npx eslint --init
 
 
 
-### 3.1 Para rodar a API no modo DESENVOLVEDOR é necessário o seguinte comando no Powershell
+### 4.1 Para rodar a API no modo DESENVOLVEDOR é necessário o seguinte comando no Powershell
 ```powershell
 
 npm run dev
 ```
 
-### 3.2 Para rodar a API
+### 4.2 Para rodar a API
 ```powershell
 
 npm start
@@ -227,7 +227,9 @@ npm start
     - [mySQL download](https://dev.mysql.com/downloads/installer/)
     - [Interface Workbench](https://dev.mysql.com/downloads/workbench/)
 
-	*Caso opte por não utilizar docker, será necessário reconfigurar a porta de banco de dados disponível no caminho abaixo depois que o repositório git for clonado com o comando mencionado acima:
+	*Caso opte por não utilizar docker, será necessário reconfigurar o host do banco de dados para localhost ou 127.0.0.1
+	
+	Disponível no caminho abaixo depois que o repositório git for clonado com o comando mencionado acima:
 
 	```powershell
 	cd expenseControlApp/backend/src/config/config.json
