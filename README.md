@@ -17,7 +17,7 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 git clone https://github.com/VilarimLucas/expenseControlApp.git
 ```
 
-## [COM DOCKER]
+## 1 [COM DOCKER]
 
 ### 1.1 Instalar a Docker
 - Instalar o serviço de DOCKER de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
@@ -40,14 +40,14 @@ docker run --name mysql --network networkExpenseControl -e MYSQL_ROOT_PASSWORD=r
 ### 1.4 Imagem do Interpretador javaScript NODE
 - NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node) ou executar os seguintes comandos em seu terminal:
 
-#### Para buildar o node no repositório local.
+#### 1.4.1 Para buildar o node no repositório local.
 
 ```powershell
 
 docker build -t node .
 
 ```
-#### Para executar o backend na porta 4000:
+#### 1.4.2 Para executar o backend na porta 4000:
 
 ```powershell
 
@@ -55,7 +55,7 @@ docker run --name node --network networkExpenseControl -p 4000:4000 node
 
 ```
 
-## CONFIGURAÇÃO DE BANCO DE DADOS
+## 2 CONFIGURAÇÃO DE BANCO DE DADOS
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento do backend.
 
@@ -207,20 +207,7 @@ npx eslint --init
 
 - ? <small style="font-weight: lighter">Which package manager do you want to use: </small><b style="font-size: larger; color: #0366d6" >npm</b>
 
-
-
-### 4.1 Para rodar a API no modo DESENVOLVEDOR é necessário o seguinte comando no Powershell
-```powershell
-
-npm run dev
-```
-
-### 4.2 Para rodar a API
-```powershell
-
-npm start
-```
-## Requisitos Prévios [SEM DOCKER]
+## 3 Requisitos Prévios [SEM DOCKER]
 
 - Node.js e npm instalados. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
 - MySQL: A configuração é local, mas pode ser facilmente reconfigurada no arquivo backend/config/config.json
@@ -234,7 +221,7 @@ npm start
 	```powershell
 	cd expenseControlApp/backend/src/config/config.json
 	```
-### Configure o Backend NODE + EXPRESS
+### 3.1 Configure o Backend NODE + EXPRESS
 ```powershell
 
 cd expenseControlApp/backend/src
@@ -243,7 +230,19 @@ npm install
 
 ```
 
+* Execute os passo da sessão 2 CONFIGURAÇÃO DE BANCO DE DADOS
 
+### 3.2.1 Para rodar a API no modo DESENVOLVEDOR é necessário o seguinte comando no Powershell
+```powershell
+
+npm run dev
+```
+
+### 3.2.2 Para rodar a API
+```powershell
+
+npm start
+```
 
 
 
