@@ -19,8 +19,10 @@ git clone https://github.com/VilarimLucas/expenseControlApp.git
 
 ## [COM DOCKER]
 
+### 1.1 Instalar a Docker
 - Instalar o serviço de DOCKER de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
 
+### 1.2 Rede compartilhada entre os containers
 - Os containers precisam estar na mesma rede, execute o seguinte comando:
 
 ```wsl
@@ -28,16 +30,14 @@ git clone https://github.com/VilarimLucas/expenseControlApp.git
 docker network create networkExpenseControl
 
 ```
+### 1.3 Imagem do SGBD MySQL
 
 - MySQL IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/mysql) ou executar o seguinte comando em seu terminal:
 
 ```wsl
-
 docker run --name mysql --network networkExpenseControl -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8.2
-
-
 ```
-
+### 1.4 Imagem do Interpretador javaScript NODE
 - NODE IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/node) ou executar os seguintes comandos em seu terminal:
 
 #### Para buildar o node no repositório local.
@@ -55,17 +55,15 @@ docker run --name node --network networkExpenseControl -p 4000:4000 node
 
 ```
 
-## Instalação
+## CONFIGURAÇÃO DE BANCO DE DADOS
 
 Siga os passos abaixo para configurar o ambiente de desenvolvimento do backend.
 
 
-### 2.1 Configure o Backend NODE + EXPRESS
+### 2.1 MIGRATIONS - no terminal do node disponível na Docker
+
+Pode utilizar o Docker desktop para configurar
 ```powershell
-
-cd expenseControlApp/backend/src
-
-npm install 
 
 npx sequelize db:create
 npx sequelize db:migrate
@@ -106,8 +104,9 @@ inner join Tags as t on t.id = ct.fk_Tag_id;
 
 
 ```
+### 2.3 TRIGGERS
 
-- Triggers USER EXPENSE
+-  USER EXPENSE
 ```sql
 
 DELIMITER $
@@ -139,7 +138,7 @@ END$
 DELIMITER ;
 ```
 
-- Triggers USER INCOME
+- USER INCOME
 ```sql
 
 DELIMITER $
@@ -171,7 +170,7 @@ END$
 DELIMITER ;
 ```
 
-### 2.3 Configure o Backend NODE + EXPRESS: ESLINT
+### [EXTRA] Configure o Backend NODE + EXPRESS: ESLINT
 
 ```powershell
 
@@ -233,7 +232,14 @@ npm start
 	```powershell
 	cd expenseControlApp/backend/src/config/config.json
 	```
+### Configure o Backend NODE + EXPRESS
+```powershell
 
+cd expenseControlApp/backend/src
+
+npm install 
+
+```
 
 
 
