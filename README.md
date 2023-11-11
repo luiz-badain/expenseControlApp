@@ -19,16 +19,15 @@ git clone https://github.com/VilarimLucas/expenseControlApp.git
 
 ## [COM DOCKER]
 
+- Instalar o serviço de DOCKER de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
+
 - Os containers precisam estar na mesma rede, execute o seguinte comando:
 
 ```wsl
 
 docker network create networkExpenseControl
 
-
 ```
-
-- Instalar o serviço de DOCKER de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
 
 - MySQL IMAGE: Pode acessar o DockerHub e pegar a ultima versão disponível em [hub.docker.com](https://hub.docker.com/_/mysql) ou executar o seguinte comando em seu terminal:
 
