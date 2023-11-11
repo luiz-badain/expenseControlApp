@@ -17,7 +17,7 @@ Este guia irá ajudá-lo a configurar o ambiente de desenvolvimento.
 git clone https://github.com/VilarimLucas/expenseControlApp.git
 ```
 
-## 1 [COM DOCKER]
+## [COM DOCKER]
 
 ### 1.1 Instalar a Docker
 - Instalar o serviço de DOCKER de preferencia com UBUNTU: [docs.docker.com](https://docs.docker.com/engine/install/ubuntu/) 
