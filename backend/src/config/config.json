@@ -3,21 +3,21 @@
     "username": "root",
     "password": "root",
     "database": "expenseControlApp",
-    "host": "mysql2",
+    "host": "mysql",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
     "database": "expenseControlApp",
-    "host": "mysql2",
+    "host": "mysql",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "root",
     "database": "expenseControlApp",
-    "host": "mysql2",
+    "host": "mysql",
     "dialect": "mysql"
   }
 }

@@ -62,5 +62,4 @@ router.put('/tag/:id', category.updateTag); // atualiza a Tag
 router.delete('/tag/:id', category.deleteTag); // Deleta a Tag
 router.delete('/category-tag/:id', category.deleteCategoryTag); // Deleta a Tag
 
-
 module.exports = router;

@@ -6,11 +6,12 @@ WORKDIR /src/app
 
 # Copie os arquivos do seu aplicativo para o contêiner
 COPY package*.json ./
+
 RUN npm install
-
-
 # Copie o restante dos arquivos do aplicativo
 COPY . .
+
+
 
 # Exponha a porta que seu aplicativo está escutando
 EXPOSE 4000

@@ -3,7 +3,7 @@
 services:
   mysqldb:
     image: mysql:8.2
-    container_name: mysql2
+    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_USER: root
