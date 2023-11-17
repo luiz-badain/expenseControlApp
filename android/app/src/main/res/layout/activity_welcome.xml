@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Welcome">
 
     <View
         android:id="@+id/topcolor3"
@@ -89,10 +89,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Blogin"
-        style="@style/gradiantBotton"
         android:layout_width="324dp"
         android:layout_height="61dp"
         android:layout_marginBottom="84dp"
+        android:background="@drawable/background_button_selector"
+        android:enabled="true"
         android:drawableEnd="@drawable/arrow3"
         android:paddingStart="20dp"
         android:text="Login"
@@ -110,8 +111,9 @@
         android:layout_width="327dp"
         android:layout_height="59dp"
         android:layout_marginTop="150dp"
-        android:background="@drawable/background_button_register"
+        android:background="@drawable/background_button_register_selector"
         android:drawableEnd="@drawable/arrow3"
+        android:enabled="true"
         android:paddingStart="20dp"
         android:text="Cadastrar"
         android:textAlignment="textStart"

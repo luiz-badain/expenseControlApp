@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ExpenseCategory">
 
 
     <View
@@ -79,6 +79,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.056" />
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/icon_more" />
+
     <View
         android:id="@+id/downcolor4"
         android:layout_width="453dp"
@@ -93,7 +105,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bregister2"
+        android:id="@+id/bsearch"
         android:layout_width="299dp"
         android:layout_height="46dp"
         android:layout_marginTop="50dp"
@@ -122,9 +134,8 @@
 
     <View
         android:id="@+id/box1"
-        android:layout_width="319dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="320dp"
+        android:layout_height="175dp"
         android:background="@drawable/valuec_shape"
         android:elevation="5dp"
         app:layout_constraintBottom_toTopOf="@+id/box2"
@@ -132,7 +143,7 @@
         app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.65999997" />
 
     <TextView
         android:id="@+id/value"
@@ -144,10 +155,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cost"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.936" />
 
     <TextView
         android:id="@+id/cost"
@@ -160,10 +170,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/box2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.896" />
 
     <TextView
         android:id="@+id/rs"
@@ -228,9 +238,25 @@
         android:elevation="10dp"
         app:layout_constraintBottom_toTopOf="@+id/downcolor2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topcolor2" />
+        app:layout_constraintTop_toBottomOf="@+id/topcolor2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/categories1"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:elevation="10dp"
+        android:text="Categoria Despesas"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.327"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.369" />
 
     <View
         android:id="@+id/Rbox"
@@ -248,21 +274,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/categories1"
-        android:layout_width="54dp"
-        android:layout_height="30dp"
-        android:elevation="10dp"
-        android:text="Categoria Despesas"
-        android:textColor="@color/white"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
-
-    <TextView
         android:id="@+id/categories2"
         android:layout_width="54dp"
         android:layout_height="30dp"
@@ -275,32 +286,32 @@
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintVertical_bias="0.369" />
 
     <ImageView
         android:id="@+id/icon_chklist"
-        android:layout_width="25dp"
-        android:layout_height="21dp"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346"
+        app:layout_constraintVertical_bias="0.328"
         app:srcCompat="@drawable/baseline_checklist_rtl_24" />
 
     <ImageView
         android:id="@+id/icon_house"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343"
+        app:layout_constraintVertical_bias="0.325"
         app:srcCompat="@drawable/baseline_add_home_24" />
 
 
