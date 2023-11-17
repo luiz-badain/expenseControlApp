@@ -34,7 +34,7 @@ router.put('/income/:id', income.update);
 router.delete('/income/:id', income.del);
 
 // Rotas do CRUD de Categoria
-router.post('/category/add', category.add); // adiciona Categoria
+router.post('/category/addd', category.add); // adiciona Categoria
 router.post('/category-expense/:id', category.addCategoryExpense); // Cadastrar categoria de despeza
 router.post('/category-income/:id', category.addCategoryIncome); // Cadastrar categoria de renda
 

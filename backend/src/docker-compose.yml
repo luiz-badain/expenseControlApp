@@ -1,0 +1,31 @@
+
+
+services:
+  mysqldb:
+    image: mysql:8.2
+    container_name: mysql2
+    restart: always
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "11376:3306"
+    expose:
+      - "3306"
+  app:
+    build: .
+    volumes:
+       - .:/src/app
+    container_name: mystifying_almeida2
+    restart: unless-stopped
+    environment:
+      - MYSQL_HOST = mysqldb
+      - MYSQL_LOCAL_PORT = 3306
+      - MYSQL_ROOT_PASSWORD = root
+      - MYSQL_ROOT_USER = root
+      - MYSQL_PASSWORD = root
+    ports:
+      - 4000:4000
+    depends_on:
+      - mysqldb
