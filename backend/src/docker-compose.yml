@@ -17,7 +17,7 @@ services:
     build: .
     volumes:
        - .:/src/app
-    container_name: mystifying_almeida2
+    container_name: node
     restart: unless-stopped
     environment:
       - MYSQL_HOST = mysqldb

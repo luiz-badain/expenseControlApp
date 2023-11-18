@@ -8,7 +8,7 @@ const income = require('./controllers/incomeController.js');
 const category = require('./controllers/categoryController.js');
 const {authenticated} = require('./middleware/authenticated.js');
 
-router.get('/', (req, res) => res.send('Hello world'));
+router.get('/', (req, res) => res.send('Hello worlds'));
 
 // Rotas do CRUD de Usuário
 router.post('/user/add', userLogin.add); // adiciona Usuário
